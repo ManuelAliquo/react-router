@@ -1,10 +1,7 @@
-import Header from "../components/Header";
-
 export default function HomePage() {
   return (
     <>
-      <Header />
-      <div className="container py-4 d-flex flex-column align-items-center">
+      <div className="d-flex flex-column align-items-center">
         <h1>Best Home Page EVER</h1>
         <figure className="text-center">
           <blockquote className="blockquote fs-2">
