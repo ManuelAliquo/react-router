@@ -1,0 +1,7 @@
+.product-card {
+  max-height: 500px;
+}
+
+.product-card > .card-body {
+  overflow-y: auto;
+}
