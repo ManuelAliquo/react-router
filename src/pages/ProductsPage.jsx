@@ -3,12 +3,26 @@ import { useEffect, useState } from "react";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
+  const [showLoading, setShowLoading] = useState(true);
 
+  // chiamata per prodotti
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
       setProducts(res.data);
+      setShowLoading(false);
     });
   }, []);
+
+  // condizionale per loading
+  if (showLoading)
+    return (
+      <div className="d-flex align-items-center">
+        <h1>Loading</h1>
+        <div className="ms-3 spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
 
   return (
     <>

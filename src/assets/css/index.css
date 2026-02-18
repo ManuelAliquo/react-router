@@ -5,3 +5,8 @@
 .product-card > .card-body {
   overflow-y: auto;
 }
+
+.nav-link-active {
+  color: black;
+  font-weight: 600;
+}

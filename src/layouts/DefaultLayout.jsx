@@ -6,6 +6,7 @@ export default function DefaultLayout() {
     <>
       <Header />
       <div className="container py-4">
+        {/* contenuto della pagina corrente */}
         <Outlet />
       </div>
     </>
