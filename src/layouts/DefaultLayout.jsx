@@ -5,10 +5,10 @@ export default function DefaultLayout() {
   return (
     <>
       <Header />
-      <div className="container py-4">
+      <main className="container py-4">
         {/* contenuto della pagina corrente */}
         <Outlet />
-      </div>
+      </main>
     </>
   );
 }
