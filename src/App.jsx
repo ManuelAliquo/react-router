@@ -1,17 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import DefaultLayout from "./layouts/DefaultLayout";
+
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ProductsPage from "./pages/ProductsPage";
-import DefaultLayout from "./layouts/DefaultLayout";
+
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route Component={DefaultLayout}>
-          <Route path="/" Component={HomePage}></Route>
-          <Route path="/about-us" Component={AboutUsPage}></Route>
-          <Route path="/products" Component={ProductsPage}></Route>
+        <Route element={<DefaultLayout />}>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/about-us" element={<AboutUsPage />}></Route>
+          <Route path="/products" element={<ProductsPage />}></Route>
+          <Route path="/products/:id" element={<ProductDetailPage />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
