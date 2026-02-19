@@ -8,15 +8,18 @@ import ProductsPage from "./pages/ProductsPage";
 
 import ProductDetailPage from "./pages/ProductDetailPage";
 
+import NotFoundPage from "./pages/NotFoundPage";
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/about-us" element={<AboutUsPage />}></Route>
-          <Route path="/products" element={<ProductsPage />}></Route>
-          <Route path="/products/:id" element={<ProductDetailPage />}></Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:id" element={<ProductDetailPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
