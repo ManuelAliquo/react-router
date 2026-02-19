@@ -1,8 +1,5 @@
 import { NavLink } from "react-router-dom";
 
-// gestione classi in base a isActive
-const activeLink = ({ isActive }) => (isActive ? "nav-link-active" : "nav-link-pending");
-
 const handleSubmit = (e) => {
   e.preventDefault();
 };
@@ -10,9 +7,12 @@ const handleSubmit = (e) => {
 export default function Header() {
   return (
     <header className="sticky-top">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        className="navbar navbar-expand-lg bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
         <div className="container-fluid">
-          <h1>Random Shop</h1>
+          <h1 className="text-white">Random Shop 🛒</h1>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,17 +27,17 @@ export default function Header() {
           <div className="collapse navbar-collapse justify-content-end gap-4" id="navbarNav">
             <ul className="navbar-nav gap-3">
               <li className="nav-item">
-                <NavLink to="/" className={activeLink}>
+                <NavLink to="/" className="nav-link">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/about-us" className={activeLink}>
+                <NavLink to="/about-us" className="nav-link">
                   About Us
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/products" className={activeLink}>
+                <NavLink to="/products" className="nav-link">
                   Products
                 </NavLink>
               </li>
@@ -49,7 +49,9 @@ export default function Header() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-primary">Search</button>
+              <button className="btn btn-outline-primary">
+                <i className="bi bi-search"></i>
+              </button>
             </form>
           </div>
         </div>

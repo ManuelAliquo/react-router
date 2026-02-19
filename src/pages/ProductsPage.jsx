@@ -27,7 +27,7 @@ export default function ProductsPage() {
   ) : (
     <>
       <h1 className="mb-4">Products</h1>
-      <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3">
+      <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
         {products.map((product) => {
           return (
             <Link to={"/products/" + product.id} className="text-decoration-none" key={product.id}>
