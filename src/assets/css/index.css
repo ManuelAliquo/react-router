@@ -1,9 +1,7 @@
-.product-card {
-  max-height: 500px;
-}
-
-.product-card > .card-body {
-  overflow-y: auto;
+.product-card .card-img-top {
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .nav-link-active {
@@ -14,4 +12,8 @@
 .nav-link-pending {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.product-card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
